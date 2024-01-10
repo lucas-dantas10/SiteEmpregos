@@ -1,6 +1,4 @@
-﻿using EasyAutomationFramework;
-using EasyAutomationFramework.Model;
-using OfficeOpenXml;
+﻿using OfficeOpenXml;
 using SiteEmpregos.Driver;
 using System.Data;
 
