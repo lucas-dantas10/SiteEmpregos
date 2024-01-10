@@ -24,8 +24,12 @@ namespace SiteEmpregos.Driver
             {
                 Item item = new Item();
 
+                string location = element.FindElement(By.ClassName("nome-empresa")).Text;
+                int index = location.IndexOf('-');
+                string locationFormated = location.Substring(index + 1);
+
                 item.Title = element.FindElement(By.TagName("h2")).Text;
-                item.Location = element.FindElement(By.ClassName("nome-empresa")).Text;
+                item.Location = locationFormated;
                 item.Description = element.FindElement(By.ClassName("resumo-vaga")).Text;
                 item.Company = element.FindElement(By.ClassName("nome-empresa")).Text;
                 item.DatePublication = element.FindElement(By.ClassName("publicado")).Text;
